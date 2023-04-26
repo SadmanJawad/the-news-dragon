@@ -3,7 +3,7 @@ import logo from "../../../assets/logo.png";
 import moment from "moment";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import Marquee from "react-fast-marquee";
-
+import { FaUserCircle } from "react-icons/fa";
 
 const Header = () => {
   return (
@@ -35,8 +35,10 @@ const Header = () => {
               <Nav.Link href="#pricing">Career</Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link href="#deets">Profile</Nav.Link>
-          
+              <Nav.Link href="#profile">
+                <FaUserCircle></FaUserCircle>
+              </Nav.Link>
+
               <Nav.Link eventKey={2} href="#memes">
                 <Button variant="dark">Login</Button>
               </Nav.Link>
