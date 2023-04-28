@@ -8,7 +8,8 @@ const Category = () => {
 
   return (
     <div>
-      <h2>This Category News : {categoryNews.length} </h2>
+      {/* যদি আইডি থাকে তাহলে দেখাবে এই লেখাটা */}
+     {id &&  <h2>This Category News : {categoryNews.length} </h2>}
       {categoryNews.map((news) => (
         <NewsCard key={news._id} news={news}></NewsCard>
       ))}
