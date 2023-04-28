@@ -1,11 +1,13 @@
 import React from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 const Login = () => {
 
     const { signIn } = useContext(AuthContext);
+    const navigate = useNavigate();
+
 
     const handleLogin = event => {
         event.preventDefault();
@@ -13,6 +15,7 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
         console.log(email, password);
+        navigate('/category/0')
 
         signIn(email, password)
             .then(result => {
